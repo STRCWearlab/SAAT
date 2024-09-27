@@ -1,0 +1,6 @@
+sessionid: User1
+timemsmin: 1493023050040
+timemsmax: 1493024776573
+recdate: 08:37:30 24.04.2017
+reclength: 1726533
+recid: m240417
