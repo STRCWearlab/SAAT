@@ -152,7 +152,7 @@ def IO_settings():
                     'sample_rate':      project.sample_rate,
                     'sample_number':    project.signal.length,
 
-                    'video_name':       project.video.name,
+                    'video_path':       project.video.name,
                     'video_width':      project.video.width,
                     'video_height':     project.video.height,
                     'video_fps':        project.video.FPS,
@@ -231,7 +231,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Set project settings.')
     parser.add_argument('--name',               type=str,   default=defaults_project['project_name'],       help="Name of the project file (required)")
 
-    parser.add_argument('--video_name',         type=str,   default=defaults_project['video_name'],         help='Path or Name of the video file in the upload folder.')
+    parser.add_argument('--video_path',         type=str,   default=defaults_project['video_path'],         help='Path of the video file.')
 
     parser.add_argument('--video_offset',       type=float, default=defaults_project['video_offset'],       help='Offset between video and signal.')
     parser.add_argument('--offset_path',        type=str,   default=defaults_project['offset_path'],        help='Path to the offset file.')
@@ -241,7 +241,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--video_opacity',      type=float, default=defaults_project['video_opacity'],      help='Opacity of the video frame (0=transparent).')
     
-    parser.add_argument('--signal_name',        type=str,   default=defaults_project['signal_name'],        help='Path or Name of the signal file in the upload folder.')
+    parser.add_argument('--signal_path',        type=str,   default=defaults_project['signal_path'],        help='Path of the signal file.')
     parser.add_argument('--sample_rate',        type=float, default=defaults_project['sample_rate'],        help='Sample rate (in Hz) of the sensor signal.')
 
     parser.add_argument('--pred_name',          type=str,   default=defaults_project['pred_name'],          help='Name of the prediction file in the upload folder.')

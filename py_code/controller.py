@@ -94,10 +94,10 @@ class Controller:
 
         if data == "test":
             args_scenario.absolute_paths = False
-            args_scenario.video_name = "test_video.mp4"
+            args_scenario.video_path = "test_video.mp4"
             args_scenario.video_fps = 1.0
             args_scenario.video_offset = 12
-            args_scenario.signal_name = "test_signal.txt"
+            args_scenario.signal_path = "test_signal.txt"
             args_scenario.sample_rate = 20
             args_scenario.pred_clear_range = 5
         # SHL Data
@@ -108,9 +108,9 @@ class Controller:
             if data == "test_shl":
                 args_scenario.video_fps = 1/30
                 args_scenario.absolute_paths = False
-                args_scenario.video_name = "timelapse_test.mp4"
+                args_scenario.video_path = "timelapse_test.mp4"
                 args_scenario.video_offset = 10500
-                args_scenario.signal_name = "Hips_Motion_Test.txt"
+                args_scenario.signal_path = "Hips_Motion_Test.txt"
             else:
                 args_scenario.absolute_paths = True
                 args_scenario.shl_path = os.path.join(self.args.shl_path,data)

@@ -30,7 +30,7 @@ def get_project(args):
     args = parse_dataset_arguments(args)
     return Project( project_name=args.name,
 
-                    video_name=args.video_name,
+                    video_path=args.video_path,
 
                     video_offset=args.video_offset,
                     offset_path=args.offset_path,
@@ -40,7 +40,7 @@ def get_project(args):
 
                     video_opacity=args.video_opacity,
 
-                    signal_name=args.signal_name,
+                    signal_path=args.signal_path,
                     sample_rate=args.sample_rate,
 
                     pred_name=args.pred_name,
@@ -80,8 +80,8 @@ class Project:
     def __init__(   self,
 
                     project_name:str        = None,
-                    signal_name:str         = None,
-                    video_name:str          = None,
+                    signal_path:str         = None,
+                    video_path:str          = None,
 
                     sample_rate:float       = 1.,
                     
@@ -204,29 +204,6 @@ class Project:
 
         return True
 
-    #########################
-    #                       #
-    #         Paths         #
-    #                       #
-    #########################
-
-    @property
-    def video_path(self):
-        if self.video_name is None:
-            return None
-        if self.modus['absolute_paths']:
-            return self.video_name
-        else:
-            return os.path.join('static/uploads/video/',self.video_name)
-        
-    @property
-    def signal_path(self):
-        if self.signal_name is None:
-            return None
-        if self.modus['absolute_paths']:
-            return self.signal_name
-        else:
-            return os.path.join('static/uploads/signal/',self.signal_name)
 
     #########################
     #                       #

@@ -3,4 +3,4 @@ Smart Annotation Assistance Tool
 
 ## How to run
 
-> python3 app.py --name "SHL /m240417" --shl_path "$DIR/../sample_data/m240417/"
+> python3 app.py --name "SHL m240417" --shl_path "sample_data/m240417/" --label_as_pred

@@ -42,7 +42,7 @@ class Settings {
     sample_rate = 1.0, 
     sample_number = 0,
 
-    video_name = "",
+    video_path = "",
     video_width = 0,
     video_height = 0,
     video_fps = 0.0,
@@ -89,7 +89,7 @@ class Settings {
     this.#_frame_number = frame_number;
   
     // General Video information
-    this.video_name = video_name;
+    this.video_path = video_path;
     this.video_width = video_width;
     this.video_height = video_height;
     this.video_fps = video_fps;
@@ -518,7 +518,7 @@ async function Setup(page="Tool"){
       sample_rate       = _settings['sample_rate'], 
       sample_number     = _settings['sample_number'], 
 
-      video_name        = _settings['video_name'],
+      video_path        = _settings['video_path'],
       video_width       = _settings['video_width'],
       video_height      = _settings['video_height'],
       video_fps         = _settings['video_fps'],
