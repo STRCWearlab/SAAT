@@ -63,11 +63,9 @@ class Annotation:
 
             if self.mat_df is not None:
                 points_ = get_breakpoints(self.mat_df["Coarse"].to_numpy())
-                print(points_)
                 self.set_anno_dict({k:LABELS_SHL_Idx2Label[v] for k,v in points_.items()})
                 print(f"Got {self.type} from Coarse file: {SHL_label_file}")
 
-        
 
     def load_anno_dict(self):
         if self.path is not None and os.path.exists(self.path):
